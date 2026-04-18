@@ -119,8 +119,9 @@ class MediaEngine {
     
     func generateWaveform(for asset: AVAsset, samples: Int = 100) async -> [CGFloat] {
         do {
-            let audioTracks = try await asset.load(.tracks).filter { track in
-                try await track.load(.mediaType) == .audio
+            let tracks = try await asset.load(.tracks)
+            let audioTracks = tracks.filter { track in
+                track.mediaType == .audio
             }
             
             guard let audioTrack = audioTracks.first else {
@@ -197,8 +198,9 @@ class MediaEngine {
         var silentRanges: [(start: Double, end: Double)] = []
         
         do {
-            let audioTracks = try await asset.load(.tracks).filter { track in
-                try await track.load(.mediaType) == .audio
+            let tracks = try await asset.load(.tracks)
+            let audioTracks = tracks.filter { track in
+                track.mediaType == .audio
             }
             
             guard let audioTrack = audioTracks.first else {

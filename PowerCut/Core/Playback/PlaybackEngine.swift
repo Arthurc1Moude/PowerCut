@@ -58,7 +58,7 @@ class PlaybackEngine {
                 let assetTracks = try await asset.load(.tracks)
                 
                 guard let assetTrack = assetTracks.first(where: { track in
-                    try? track.load(.mediaType) == .video
+                    track.mediaType == .video
                 }) else {
                     continue
                 }
@@ -90,7 +90,7 @@ class PlaybackEngine {
                 let assetTracks = try await asset.load(.tracks)
                 
                 guard let assetTrack = assetTracks.first(where: { track in
-                    try? track.load(.mediaType) == .audio
+                    track.mediaType == .audio
                 }) else {
                     continue
                 }

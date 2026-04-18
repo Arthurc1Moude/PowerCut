@@ -226,7 +226,7 @@ struct AIToolsInspectorView: View {
                     icon: "waveform.badge.magnifyingglass",
                     description: "Remove noise and enhance clarity"
                 ) {
-                    aiOrchestrator.cleanupAudio()
+                    Task { await aiOrchestrator.cleanupAudio() }
                 }
                 
                 AIToolButton(
@@ -234,7 +234,7 @@ struct AIToolsInspectorView: View {
                     icon: "paintpalette",
                     description: "Automatic color correction"
                 ) {
-                    aiOrchestrator.autoColorBalance()
+                    Task { await aiOrchestrator.autoColorBalance() }
                 }
             }
         }

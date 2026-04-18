@@ -148,7 +148,7 @@ struct AIToolsInspectorView: View {
                     icon: "film",
                     description: "Automatically identify scene changes"
                 ) {
-                    aiOrchestrator.detectScenes()
+                    Task { await aiOrchestrator.detectScenes() }
                 }
                 
                 AIToolButton(
@@ -156,7 +156,7 @@ struct AIToolsInspectorView: View {
                     icon: "waveform",
                     description: "Generate text transcript from speech"
                 ) {
-                    aiOrchestrator.transcribeAudio()
+                    Task { await aiOrchestrator.transcribeAudio() }
                 }
                 
                 AIToolButton(
@@ -164,7 +164,7 @@ struct AIToolsInspectorView: View {
                     icon: "person.2",
                     description: "Detect and label different speakers"
                 ) {
-                    aiOrchestrator.identifySpeakers()
+                    Task { await aiOrchestrator.identifySpeakers() }
                 }
             }
             
@@ -174,7 +174,7 @@ struct AIToolsInspectorView: View {
                     icon: "speaker.slash",
                     description: "Cut out silent portions automatically"
                 ) {
-                    aiOrchestrator.removeSilence()
+                    Task { await aiOrchestrator.removeSilence() }
                 }
                 
                 AIToolButton(
@@ -182,7 +182,7 @@ struct AIToolsInspectorView: View {
                     icon: "star",
                     description: "Find and extract best moments"
                 ) {
-                    aiOrchestrator.extractHighlights()
+                    Task { await aiOrchestrator.extractHighlights() }
                 }
                 
                 AIToolButton(
@@ -190,7 +190,7 @@ struct AIToolsInspectorView: View {
                     icon: "crop",
                     description: "Reframe for different aspect ratios"
                 ) {
-                    aiOrchestrator.smartCrop()
+                    Task { await aiOrchestrator.smartCrop() }
                 }
             }
             
@@ -200,7 +200,7 @@ struct AIToolsInspectorView: View {
                     icon: "captions.bubble",
                     description: "Create accurate subtitles with timing"
                 ) {
-                    aiOrchestrator.generateSubtitles()
+                    Task { await aiOrchestrator.generateSubtitles() }
                 }
                 
                 AIToolButton(
@@ -208,7 +208,7 @@ struct AIToolsInspectorView: View {
                     icon: "textformat",
                     description: "AI-generated title suggestions"
                 ) {
-                    aiOrchestrator.suggestTitles()
+                    Task { await aiOrchestrator.suggestTitles() }
                 }
                 
                 AIToolButton(
@@ -216,7 +216,7 @@ struct AIToolsInspectorView: View {
                     icon: "photo",
                     description: "Create engaging thumbnail images"
                 ) {
-                    aiOrchestrator.generateThumbnail()
+                    Task { await aiOrchestrator.generateThumbnail() }
                 }
             }
             

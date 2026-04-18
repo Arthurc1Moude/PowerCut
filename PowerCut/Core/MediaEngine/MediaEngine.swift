@@ -271,4 +271,3 @@ enum VideoEffect {
     case sharpen(intensity: Float)
     case colorCorrection(brightness: Float, contrast: Float, saturation: Float)
 }
-}

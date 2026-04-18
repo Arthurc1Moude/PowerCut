@@ -59,12 +59,12 @@ struct ToolbarView: View {
             
             // AI Actions
             Menu {
-                Button("Auto-Edit Project") { aiOrchestrator.autoEditProject() }
-                Button("Remove Silence") { aiOrchestrator.removeSilence() }
-                Button("Detect Scenes") { aiOrchestrator.detectScenes() }
-                Button("Generate Subtitles") { aiOrchestrator.generateSubtitles() }
-                Button("Extract Highlights") { aiOrchestrator.extractHighlights() }
-                Button("Reframe for Vertical") { aiOrchestrator.reframeVertical() }
+                Button("Auto-Edit Project") { Task { await aiOrchestrator.autoEditProject() } }
+                Button("Remove Silence") { Task { await aiOrchestrator.removeSilence() } }
+                Button("Detect Scenes") { Task { await aiOrchestrator.detectScenes() } }
+                Button("Generate Subtitles") { Task { await aiOrchestrator.generateSubtitles() } }
+                Button("Extract Highlights") { Task { await aiOrchestrator.extractHighlights() } }
+                Button("Reframe for Vertical") { Task { await aiOrchestrator.reframeVertical() } }
             } label: {
                 Label("AI Tools", systemImage: "wand.and.stars")
             }

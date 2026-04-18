@@ -53,7 +53,7 @@ class ExportEngine {
                 let assetTracks = try await asset.load(.tracks)
                 
                 guard let assetTrack = assetTracks.first(where: { track in
-                    try? track.load(.mediaType) == .video
+                    (try? track.load(.mediaType)) == .video
                 }) else {
                     continue
                 }
@@ -91,7 +91,7 @@ class ExportEngine {
                 let assetTracks = try await asset.load(.tracks)
                 
                 guard let assetTrack = assetTracks.first(where: { track in
-                    try? track.load(.mediaType) == .audio
+                    (try? track.load(.mediaType)) == .audio
                 }) else {
                     continue
                 }

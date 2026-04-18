@@ -1,0 +1,64 @@
+name: Create Xcode Project
+
+on:
+  workflow_dispatch:  # Manual trigger only
+
+jobs:
+  create-project:
+    name: Generate Xcode Project on macOS
+    runs-on: macos-14
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Create Xcode Project
+      run: |
+        # Create a new Xcode project using swift package
+        mkdir -p TempProject
+        cd TempProject
+        
+        # Create Package.swift
+        cat > Package.swift << 'PACKAGE'
+        // swift-tools-version: 5.9
+        import PackageDescription
+
+        let package = Package(
+            name: "PowerCut",
+            platforms: [.macOS(.v13)],
+            products: [
+                .executable(name: "PowerCut", targets: ["PowerCut"])
+            ],
+            targets: [
+                .executableTarget(
+                    name: "PowerCut",
+                    path: "Sources"
+                )
+            ]
+        )
+        PACKAGE
+        
+        # Create directory structure
+        mkdir -p Sources
+        
+        # Copy all Swift files
+        cp -r ../PowerCut/*.swift Sources/ 2>/dev/null || true
+        cp -r ../PowerCut/*/*.swift Sources/ 2>/dev/null || true
+        cp -r ../PowerCut/*/*/*.swift Sources/ 2>/dev/null || true
+        
+        # Generate Xcode project from Package
+        swift package generate-xcodeproj
+        
+        # Copy generated project back
+        cp -r PowerCut.xcodeproj ../
+        
+        cd ..
+        rm -rf TempProject
+    
+    - name: Commit and Push
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+        git add PowerCut.xcodeproj
+        git commit -m "Generate Xcode project from Swift Package"
+        git push

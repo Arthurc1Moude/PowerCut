@@ -127,14 +127,7 @@ class ProjectManager: ObservableObject {
                     }
                 }
                 
-                // Generate thumbnail if video
-                let thumbnail: NSImage? = if detectedMediaType == .video {
-                    await ThumbnailGenerator.shared.generateThumbnail(for: asset)
-                } else {
-                    nil
-                }
-                
-                let mediaItem = MediaItem(
+                var mediaItem = MediaItem(
                     id: UUID(),
                     name: url.lastPathComponent,
                     url: url,
@@ -148,9 +141,13 @@ class ProjectManager: ObservableObject {
                     hasAudio: hasAudio,
                     sampleRate: 48000,
                     audioChannels: 2,
-                    audioBitRate: 256,
-                    thumbnail: thumbnail
+                    audioBitRate: 256
                 )
+                
+                // Generate thumbnail if video
+                if detectedMediaType == .video {
+                    mediaItem.thumbnail = await ThumbnailGenerator.shared.generateThumbnail(for: asset)
+                }
                 
                 await MainActor.run {
                     self.mediaItems.append(mediaItem)

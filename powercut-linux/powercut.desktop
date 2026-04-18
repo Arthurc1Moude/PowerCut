@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=PowerCut
+Comment=AI-Driven Video Editor
+Exec=/usr/bin/env bash -c "cd %d && ./run.sh"
+Icon=video-editor
+Terminal=false
+Categories=AudioVideo;Video;AudioVideoEditing;
+Keywords=video;editor;ai;editing;

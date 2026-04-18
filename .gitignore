@@ -44,3 +44,4 @@ iOSInjectionProject/
 *.swo
 *~
 .*.sw?
+powercut-linux/venv/

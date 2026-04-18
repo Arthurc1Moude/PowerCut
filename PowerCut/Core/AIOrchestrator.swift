@@ -229,9 +229,11 @@ class AIOrchestrator: ObservableObject {
         job.result = result
         job.error = error
         
+        let updatedJob = job // Capture the value
+        
         DispatchQueue.main.async {
-            if let index = self.activeJobs.firstIndex(where: { $0.id == job.id }) {
-                self.activeJobs[index] = job
+            if let index = self.activeJobs.firstIndex(where: { $0.id == updatedJob.id }) {
+                self.activeJobs[index] = updatedJob
             }
             
             if self.activeJobs.allSatisfy({ $0.status == .completed || $0.status == .failed }) {

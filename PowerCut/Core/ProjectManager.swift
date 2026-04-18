@@ -110,28 +110,28 @@ class ProjectManager: ObservableObject {
                 let duration = try await asset.load(.duration)
                 let tracks = try await asset.load(.tracks)
                 
-                var mediaType: MediaItem.MediaType = .video
+                var detectedMediaType: MediaItem.MediaType = .video
                 var resolution = CGSize.zero
                 var frameRate: Double = 0
                 var hasAudio = false
                 
                 for track in tracks {
-                    let mediaType = track.mediaType
+                    let trackMediaType = track.mediaType
                     
-                    if mediaType == .video {
+                    if trackMediaType == .video {
                         let size = try await track.load(.naturalSize)
                         resolution = size
                         frameRate = Double(try await track.load(.nominalFrameRate))
-                    } else if mediaType == .audio {
+                    } else if trackMediaType == .audio {
                         hasAudio = true
                     }
                 }
                 
-                var mediaItem = MediaItem(
+                let mediaItem = MediaItem(
                     id: UUID(),
                     name: url.lastPathComponent,
                     url: url,
-                    type: mediaType,
+                    type: detectedMediaType,
                     duration: duration.seconds,
                     fileSize: try FileManager.default.attributesOfItem(atPath: url.path)[.size] as? Int64 ?? 0,
                     dateAdded: Date(),
@@ -145,12 +145,13 @@ class ProjectManager: ObservableObject {
                 )
                 
                 // Generate thumbnail
-                if mediaType == .video {
-                    mediaItem.thumbnail = await ThumbnailGenerator.shared.generateThumbnail(for: asset)
+                var finalMediaItem = mediaItem
+                if detectedMediaType == .video {
+                    finalMediaItem.thumbnail = await ThumbnailGenerator.shared.generateThumbnail(for: asset)
                 }
                 
                 await MainActor.run {
-                    self.mediaItems.append(mediaItem)
+                    self.mediaItems.append(finalMediaItem)
                 }
             } catch {
                 await MainActor.run {

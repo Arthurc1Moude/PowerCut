@@ -3,125 +3,528 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 77;
 	objects = {
-		rootObject = {
+
+/* Begin PBXBuildFile section */
+		12990CF47E24F7183F9C648C /* NSAlert+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BCCF74B55DC7CFE2A47F9E /* NSAlert+Extensions.swift */; };
+		1507D8FB5E6B38EBE149AFEA /* MediaBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF779D3CD63D9CB88F82423 /* MediaBrowserView.swift */; };
+		1578F320C91BFF63A023AF96 /* SceneDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B658C2328942EB71CCC1A567 /* SceneDetector.swift */; };
+		188D247C582EAFF5714BC496 /* MainWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AEC45BE18194653234A715 /* MainWindowView.swift */; };
+		20D36A011EA1661FB79608C2 /* PreviewMonitorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565DC7738DB8CC117529C26 /* PreviewMonitorsView.swift */; };
+		276668E032330CE89D4F6DE2 /* ProjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272BCE2E0BA623C2904496FD /* ProjectManager.swift */; };
+		2801F07A921EB9960ED70ADB /* PowerCutCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5375CBB979972FEDED01F331 /* PowerCutCommands.swift */; };
+		3CD57A7459F6FF753E7C2D9E /* VideoAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA03AF25A5E1D99455715217 /* VideoAnalyzer.swift */; };
+		4BC834C44BA7EEAD598F6D50 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A33E607A8D9BB5332F15B2C /* Extensions.swift */; };
+		619DC9DED545D987DCB19AF4 /* TimelineEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F8EABFC1816C7E37F255A8 /* TimelineEngine.swift */; };
+		65609ABDAF34997F5C395226 /* MediaEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6573394857F36EF8A10790 /* MediaEngine.swift */; };
+		698345B15148E0E07181A00A /* ExportEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01117E9D62E0439ADB71CC71 /* ExportEngine.swift */; };
+		6B523A3D36A6DF9ED4D4E99C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412877FB14DCC436FAB8B769 /* AppDelegate.swift */; };
+		7850EB426812948D365A4709 /* FileManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A265E4F38A495D3CE5671B48 /* FileManager+Extensions.swift */; };
+		9FFD125DFD55A6EEBC7BAAFA /* ThumbnailGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A85361CE198BD6069373F6 /* ThumbnailGenerator.swift */; };
+		ABC79163C0A5CA750BF47A14 /* AIOrchestrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EBE6C71724A97DCD8495A7 /* AIOrchestrator.swift */; };
+		ACEE94A7E59933F6E5D0F821 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CC3D397BFF4525E3FF1F8 /* Models.swift */; };
+		B7BD4397768F95ABED2E241E /* InspectorPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8649173D99D7BC33A903CB0 /* InspectorPanelView.swift */; };
+		B9F17F2DBAC64EE14301E048 /* TimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BDCA0FBB725C5F80599E08 /* TimeFormatter.swift */; };
+		D3C41FF5AB45CB6B190A96E8 /* Project+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971C9C50E9A41B55FD68578F /* Project+Codable.swift */; };
+		D3D4E86A7CBACA581DE28147 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546D5C50B5DF904DBD6AFC9E /* SettingsView.swift */; };
+		E07A1C70546D55DBC5F74375 /* PowerCutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2714A71BA2342DF62601BF4F /* PowerCutApp.swift */; };
+		EE09AD13829BF2FD92AF56A1 /* PlaybackEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAEC9006DF3F6A1C28CD414 /* PlaybackEngine.swift */; };
+		EEDD6451CBAFCA2551B2DF2E /* TimelineEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8348187DB0341E141BD832AC /* TimelineEditorView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		01117E9D62E0439ADB71CC71 /* ExportEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportEngine.swift; sourceTree = "<group>"; };
+		09EBE6C71724A97DCD8495A7 /* AIOrchestrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIOrchestrator.swift; sourceTree = "<group>"; };
+		0C56C91E626776B6FDB4FF43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1565DC7738DB8CC117529C26 /* PreviewMonitorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewMonitorsView.swift; sourceTree = "<group>"; };
+		18F8EABFC1816C7E37F255A8 /* TimelineEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineEngine.swift; sourceTree = "<group>"; };
+		22A85361CE198BD6069373F6 /* ThumbnailGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailGenerator.swift; sourceTree = "<group>"; };
+		2714A71BA2342DF62601BF4F /* PowerCutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerCutApp.swift; sourceTree = "<group>"; };
+		272BCE2E0BA623C2904496FD /* ProjectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectManager.swift; sourceTree = "<group>"; };
+		3997CCCE2D39EF03F02FDB1E /* PowerCut.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PowerCut.entitlements; sourceTree = "<group>"; };
+		412877FB14DCC436FAB8B769 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5375CBB979972FEDED01F331 /* PowerCutCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerCutCommands.swift; sourceTree = "<group>"; };
+		546D5C50B5DF904DBD6AFC9E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		5A33E607A8D9BB5332F15B2C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		7BF779D3CD63D9CB88F82423 /* MediaBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaBrowserView.swift; sourceTree = "<group>"; };
+		7FAEC9006DF3F6A1C28CD414 /* PlaybackEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackEngine.swift; sourceTree = "<group>"; };
+		8348187DB0341E141BD832AC /* TimelineEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineEditorView.swift; sourceTree = "<group>"; };
+		84BDCA0FBB725C5F80599E08 /* TimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatter.swift; sourceTree = "<group>"; };
+		86AEC45BE18194653234A715 /* MainWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowView.swift; sourceTree = "<group>"; };
+		8B6573394857F36EF8A10790 /* MediaEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaEngine.swift; sourceTree = "<group>"; };
+		971C9C50E9A41B55FD68578F /* Project+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+Codable.swift"; sourceTree = "<group>"; };
+		A265E4F38A495D3CE5671B48 /* FileManager+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extensions.swift"; sourceTree = "<group>"; };
+		B658C2328942EB71CCC1A567 /* SceneDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDetector.swift; sourceTree = "<group>"; };
+		C8649173D99D7BC33A903CB0 /* InspectorPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectorPanelView.swift; sourceTree = "<group>"; };
+		D4BCCF74B55DC7CFE2A47F9E /* NSAlert+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAlert+Extensions.swift"; sourceTree = "<group>"; };
+		DA8CC3D397BFF4525E3FF1F8 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		F40290F06A32F7BEA27912F9 /* PowerCut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PowerCut.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA03AF25A5E1D99455715217 /* VideoAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoAnalyzer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0ABAE2394E7BEECED66DF830 = {
+			isa = PBXGroup;
+			children = (
+				7667DF5F0147094AE9E6A647 /* PowerCut */,
+				342980D41FDDEF103795DC1D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0D31895F19F1C23864DD4FA3 /* MediaBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				7BF779D3CD63D9CB88F82423 /* MediaBrowserView.swift */,
+			);
+			path = MediaBrowser;
+			sourceTree = "<group>";
+		};
+		1FCC86AA674912B94647891A /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				5375CBB979972FEDED01F331 /* PowerCutCommands.swift */,
+			);
+			path = Commands;
+			sourceTree = "<group>";
+		};
+		212692292B2CBF22B321E6B3 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				86AEC45BE18194653234A715 /* MainWindowView.swift */,
+				1FCC86AA674912B94647891A /* Commands */,
+				ADBC5F94E78D08B5FB4B32E4 /* Inspector */,
+				0D31895F19F1C23864DD4FA3 /* MediaBrowser */,
+				FB7090B673E019EA08B9B63B /* Preview */,
+				B22FBADFC080D99546B7C249 /* Settings */,
+				AFAD93B05455969E2EAABFC3 /* Timeline */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		342980D41FDDEF103795DC1D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F40290F06A32F7BEA27912F9 /* PowerCut.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A49775B0BA4A18657BB925F /* MediaEngine */ = {
+			isa = PBXGroup;
+			children = (
+				8B6573394857F36EF8A10790 /* MediaEngine.swift */,
+			);
+			path = MediaEngine;
+			sourceTree = "<group>";
+		};
+		42435D7D2893D4DFAB39A608 /* Thumbnail */ = {
+			isa = PBXGroup;
+			children = (
+				22A85361CE198BD6069373F6 /* ThumbnailGenerator.swift */,
+			);
+			path = Thumbnail;
+			sourceTree = "<group>";
+		};
+		4793B50855D75054DB3AD849 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DA8CC3D397BFF4525E3FF1F8 /* Models.swift */,
+				971C9C50E9A41B55FD68578F /* Project+Codable.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7667DF5F0147094AE9E6A647 /* PowerCut */ = {
+			isa = PBXGroup;
+			children = (
+				412877FB14DCC436FAB8B769 /* AppDelegate.swift */,
+				0C56C91E626776B6FDB4FF43 /* Info.plist */,
+				3997CCCE2D39EF03F02FDB1E /* PowerCut.entitlements */,
+				2714A71BA2342DF62601BF4F /* PowerCutApp.swift */,
+				D447CC904F14297C9F071FC1 /* Core */,
+				212692292B2CBF22B321E6B3 /* UI */,
+				EA6FE7B27D0ABC33F35830FA /* Utilities */,
+			);
+			path = PowerCut;
+			sourceTree = "<group>";
+		};
+		89A4BC5417D47DAD16629FCB /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A265E4F38A495D3CE5671B48 /* FileManager+Extensions.swift */,
+				FA03AF25A5E1D99455715217 /* VideoAnalyzer.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		9783FEDEEB9522D2E721006D /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				18F8EABFC1816C7E37F255A8 /* TimelineEngine.swift */,
+			);
+			path = Timeline;
+			sourceTree = "<group>";
+		};
+		A686D9270F06FD86F7A5DD1B /* SceneDetection */ = {
+			isa = PBXGroup;
+			children = (
+				B658C2328942EB71CCC1A567 /* SceneDetector.swift */,
+			);
+			path = SceneDetection;
+			sourceTree = "<group>";
+		};
+		ADBC5F94E78D08B5FB4B32E4 /* Inspector */ = {
+			isa = PBXGroup;
+			children = (
+				C8649173D99D7BC33A903CB0 /* InspectorPanelView.swift */,
+			);
+			path = Inspector;
+			sourceTree = "<group>";
+		};
+		AE3CD895B0A737E7B226B309 /* Export */ = {
+			isa = PBXGroup;
+			children = (
+				01117E9D62E0439ADB71CC71 /* ExportEngine.swift */,
+			);
+			path = Export;
+			sourceTree = "<group>";
+		};
+		AFAD93B05455969E2EAABFC3 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				8348187DB0341E141BD832AC /* TimelineEditorView.swift */,
+			);
+			path = Timeline;
+			sourceTree = "<group>";
+		};
+		B22FBADFC080D99546B7C249 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				546D5C50B5DF904DBD6AFC9E /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		C08601590A1CE8A1C45900C4 /* Playback */ = {
+			isa = PBXGroup;
+			children = (
+				7FAEC9006DF3F6A1C28CD414 /* PlaybackEngine.swift */,
+			);
+			path = Playback;
+			sourceTree = "<group>";
+		};
+		D447CC904F14297C9F071FC1 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				09EBE6C71724A97DCD8495A7 /* AIOrchestrator.swift */,
+				272BCE2E0BA623C2904496FD /* ProjectManager.swift */,
+				AE3CD895B0A737E7B226B309 /* Export */,
+				3A49775B0BA4A18657BB925F /* MediaEngine */,
+				4793B50855D75054DB3AD849 /* Models */,
+				C08601590A1CE8A1C45900C4 /* Playback */,
+				A686D9270F06FD86F7A5DD1B /* SceneDetection */,
+				42435D7D2893D4DFAB39A608 /* Thumbnail */,
+				9783FEDEEB9522D2E721006D /* Timeline */,
+				89A4BC5417D47DAD16629FCB /* Utilities */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EA6FE7B27D0ABC33F35830FA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5A33E607A8D9BB5332F15B2C /* Extensions.swift */,
+				D4BCCF74B55DC7CFE2A47F9E /* NSAlert+Extensions.swift */,
+				84BDCA0FBB725C5F80599E08 /* TimeFormatter.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		FB7090B673E019EA08B9B63B /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+				1565DC7738DB8CC117529C26 /* PreviewMonitorsView.swift */,
+			);
+			path = Preview;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		43D7783A05B31A2B011DA3BC /* PowerCut */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77082BC78DCD0E09D0DDBBF5 /* Build configuration list for PBXNativeTarget "PowerCut" */;
+			buildPhases = (
+				883A19B0392A07C2E16DD928 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PowerCut;
+			packageProductDependencies = (
+			);
+			productName = PowerCut;
+			productReference = F40290F06A32F7BEA27912F9 /* PowerCut.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0B1495E45997CFDE1B82FAC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
+				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					43D7783A05B31A2B011DA3BC = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
-			buildConfigurationList = {
-				isa = XCConfigurationList;
-				buildConfigurations = (
-					{
-						isa = XCBuildConfiguration;
-						buildSettings = {
-							ALWAYS_SEARCH_USER_PATHS = NO;
-							ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-							CLANG_ANALYZER_NONNULL = YES;
-							CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-							CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-							CLANG_ENABLE_MODULES = YES;
-							CLANG_ENABLE_OBJC_ARC = YES;
-							CLANG_ENABLE_OBJC_WEAK = YES;
-							CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-							CLANG_WARN_BOOL_CONVERSION = YES;
-							CLANG_WARN_COMMA = YES;
-							CLANG_WARN_CONSTANT_CONVERSION = YES;
-							CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-							CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-							CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-							CLANG_WARN_EMPTY_BODY = YES;
-							CLANG_WARN_ENUM_CONVERSION = YES;
-							CLANG_WARN_INFINITE_RECURSION = YES;
-							CLANG_WARN_INT_CONVERSION = YES;
-							CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-							CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-							CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-							CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-							CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-							CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-							CLANG_WARN_STRICT_PROTOTYPES = YES;
-							CLANG_WARN_SUSPICIOUS_MOVE = YES;
-							CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-							CLANG_WARN_UNREACHABLE_CODE = YES;
-							CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-							CODE_SIGN_ENTITLEMENTS = PowerCut/PowerCut.entitlements;
-							CODE_SIGN_STYLE = Automatic;
-							COMBINE_HIDPI_IMAGES = YES;
-							CURRENT_PROJECT_VERSION = 1;
-							DEVELOPMENT_ASSET_PATHS = "\"PowerCut/Preview Content\"";
-							DEVELOPMENT_TEAM = "";
-							ENABLE_HARDENED_RUNTIME = YES;
-							ENABLE_PREVIEWS = YES;
-							ENABLE_STRICT_OBJC_MSGSEND = YES;
-							ENABLE_TESTABILITY = YES;
-							GCC_C_LANGUAGE_STANDARD = gnu11;
-							GCC_DYNAMIC_NO_PIC = NO;
-							GCC_NO_COMMON_BLOCKS = YES;
-							GCC_OPTIMIZATION_LEVEL = 0;
-							GCC_PREPROCESSOR_DEFINITIONS = (
-								"DEBUG=1",
-								"$(inherited)",
-							);
-							GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-							GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-							GCC_WARN_UNDECLARED_SELECTOR = YES;
-							GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-							GCC_WARN_UNUSED_FUNCTION = YES;
-							GCC_WARN_UNUSED_VARIABLE = YES;
-							GENERATE_INFOPLIST_FILE = YES;
-							INFOPLIST_FILE = PowerCut/Info.plist;
-							INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
-							INFOPLIST_KEY_NSHumanReadableCopyright = "";
-							LD_RUNPATH_SEARCH_PATHS = (
-								"$(inherited)",
-								"@executable_path/../Frameworks",
-							);
-							MACOSX_DEPLOYMENT_TARGET = 13.0;
-							MARKETING_VERSION = 1.0;
-							MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-							MTL_FAST_MATH = YES;
-							ONLY_ACTIVE_ARCH = YES;
-							PRODUCT_BUNDLE_IDENTIFIER = com.powercut.app;
-							PRODUCT_NAME = "$(TARGET_NAME)";
-							SDKROOT = macosx;
-							SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-							SWIFT_EMIT_LOC_STRINGS = YES;
-							SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-							SWIFT_VERSION = 5.0;
-						};
-						name = Debug;
-					},
-				);
-			};
-			compatibilityVersion = "Xcode 14.0";
+			buildConfigurationList = CFD084CD9E3B68D3AEE51806 /* Build configuration list for PBXProject "PowerCut" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
-			mainGroup = {
-				isa = PBXGroup;
-				children = (
-					PowerCut,
-				);
-			};
-			productRefGroup = {
-				isa = PBXGroup;
-				children = (
-				);
-			};
+			mainGroup = 0ABAE2394E7BEECED66DF830;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 342980D41FDDEF103795DC1D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				43D7783A05B31A2B011DA3BC /* PowerCut */,
 			);
 		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		883A19B0392A07C2E16DD928 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABC79163C0A5CA750BF47A14 /* AIOrchestrator.swift in Sources */,
+				6B523A3D36A6DF9ED4D4E99C /* AppDelegate.swift in Sources */,
+				698345B15148E0E07181A00A /* ExportEngine.swift in Sources */,
+				4BC834C44BA7EEAD598F6D50 /* Extensions.swift in Sources */,
+				7850EB426812948D365A4709 /* FileManager+Extensions.swift in Sources */,
+				B7BD4397768F95ABED2E241E /* InspectorPanelView.swift in Sources */,
+				188D247C582EAFF5714BC496 /* MainWindowView.swift in Sources */,
+				1507D8FB5E6B38EBE149AFEA /* MediaBrowserView.swift in Sources */,
+				65609ABDAF34997F5C395226 /* MediaEngine.swift in Sources */,
+				ACEE94A7E59933F6E5D0F821 /* Models.swift in Sources */,
+				12990CF47E24F7183F9C648C /* NSAlert+Extensions.swift in Sources */,
+				EE09AD13829BF2FD92AF56A1 /* PlaybackEngine.swift in Sources */,
+				E07A1C70546D55DBC5F74375 /* PowerCutApp.swift in Sources */,
+				2801F07A921EB9960ED70ADB /* PowerCutCommands.swift in Sources */,
+				20D36A011EA1661FB79608C2 /* PreviewMonitorsView.swift in Sources */,
+				D3C41FF5AB45CB6B190A96E8 /* Project+Codable.swift in Sources */,
+				276668E032330CE89D4F6DE2 /* ProjectManager.swift in Sources */,
+				1578F320C91BFF63A023AF96 /* SceneDetector.swift in Sources */,
+				D3D4E86A7CBACA581DE28147 /* SettingsView.swift in Sources */,
+				9FFD125DFD55A6EEBC7BAAFA /* ThumbnailGenerator.swift in Sources */,
+				B9F17F2DBAC64EE14301E048 /* TimeFormatter.swift in Sources */,
+				EEDD6451CBAFCA2551B2DF2E /* TimelineEditorView.swift in Sources */,
+				619DC9DED545D987DCB19AF4 /* TimelineEngine.swift in Sources */,
+				3CD57A7459F6FF753E7C2D9E /* VideoAnalyzer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A84E203A43992D10C44238D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PowerCut/PowerCut.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = PowerCut/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.powercut.app;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B9EB27B8189E43FCB5AAB981 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PowerCut/PowerCut.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = PowerCut/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.powercut.app;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BDE94694B205A818AB8E0058 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C5A0230671272F970CEC852D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		77082BC78DCD0E09D0DDBBF5 /* Build configuration list for PBXNativeTarget "PowerCut" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A84E203A43992D10C44238D0 /* Debug */,
+				B9EB27B8189E43FCB5AAB981 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CFD084CD9E3B68D3AEE51806 /* Build configuration list for PBXProject "PowerCut" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDE94694B205A818AB8E0058 /* Debug */,
+				C5A0230671272F970CEC852D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
 	};
-	rootObject = {
-		isa = PBXProject;
-	};
+	rootObject = D0B1495E45997CFDE1B82FAC /* Project object */;
 }

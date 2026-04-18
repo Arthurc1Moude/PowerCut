@@ -149,8 +149,11 @@ class ProjectManager: ObservableObject {
                     mediaItem.thumbnail = await ThumbnailGenerator.shared.generateThumbnail(for: asset)
                 }
                 
+                // Capture the final value
+                let finalItem = mediaItem
+                
                 await MainActor.run {
-                    self.mediaItems.append(mediaItem)
+                    self.mediaItems.append(finalItem)
                 }
             } catch {
                 await MainActor.run {

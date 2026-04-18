@@ -116,7 +116,7 @@ class ProjectManager: ObservableObject {
                 var hasAudio = false
                 
                 for track in tracks {
-                    let mediaType = try await track.load(.mediaType)
+                    let mediaType = track.mediaType
                     
                     if mediaType == .video {
                         let size = try await track.load(.naturalSize)

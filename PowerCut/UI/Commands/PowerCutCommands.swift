@@ -46,15 +46,15 @@ struct PowerCutCommands: Commands {
             Divider()
             
             Button("Detect Scenes") {
-                AIOrchestrator.shared.detectScenes()
+                Task { await AIOrchestrator.shared.detectScenes() }
             }
             
             Button("Remove Silence") {
-                AIOrchestrator.shared.removeSilence()
+                Task { await AIOrchestrator.shared.removeSilence() }
             }
             
             Button("Generate Subtitles") {
-                AIOrchestrator.shared.generateSubtitles()
+                Task { await AIOrchestrator.shared.generateSubtitles() }
             }
         }
     }

@@ -1,20 +1,27 @@
 # PowerCut Makefile
 # For development on Debian, building on GitHub Actions
 
-.PHONY: help init push build download release clean
+.PHONY: help init push build download release clean generate-project
 
 help:
 	@echo "PowerCut - macOS App Development from Debian"
 	@echo ""
 	@echo "Commands:"
-	@echo "  make init      - Initialize git and create GitHub repo"
-	@echo "  make push      - Commit and push changes (triggers build)"
-	@echo "  make build     - Push and wait for GitHub Actions build"
-	@echo "  make download  - Download latest build from GitHub"
-	@echo "  make release   - Create a new release version"
-	@echo "  make clean     - Clean local artifacts"
+	@echo "  make generate-project - Generate Xcode project with xcodegen (FREE)"
+	@echo "  make init             - Initialize git and create GitHub repo"
+	@echo "  make push             - Commit and push changes (triggers build)"
+	@echo "  make build            - Push and wait for GitHub Actions build"
+	@echo "  make download         - Download latest build from GitHub"
+	@echo "  make release          - Create a new release version"
+	@echo "  make clean            - Clean local artifacts"
 	@echo ""
-	@echo "Workflow:"
+	@echo "First Time Setup:"
+	@echo "  1. make generate-project  (generates Xcode project - FREE!)"
+	@echo "  2. Wait 2-3 minutes for PR"
+	@echo "  3. Merge the PR"
+	@echo "  4. make push (to build)"
+	@echo ""
+	@echo "Daily Workflow:"
 	@echo "  1. Edit code on Debian"
 	@echo "  2. make push"
 	@echo "  3. make download"
@@ -92,3 +99,34 @@ status:
 watch:
 	@echo "Watching GitHub Actions..."
 	@gh run watch
+
+generate-project:
+	@echo "🚀 Generating Xcode project with xcodegen (FREE)..."
+	@echo ""
+	@echo "This will:"
+	@echo "  1. Push project.yml to GitHub"
+	@echo "  2. Trigger GitHub Actions on macOS runner"
+	@echo "  3. Generate PowerCut.xcodeproj automatically"
+	@echo "  4. Create a Pull Request with the project"
+	@echo ""
+	@echo "Cost: $0.00 (completely free!)"
+	@echo "Time: 2-3 minutes"
+	@echo ""
+	@read -p "Press Enter to continue..." dummy
+	@echo ""
+	@echo "Committing xcodegen configuration..."
+	@git add project.yml .github/workflows/generate-xcode-project.yml XCODEGEN_SOLUTION.md FREE_MACOS_OPTIONS.md
+	@git commit -m "Add xcodegen configuration for automatic Xcode project generation" || echo "Already committed"
+	@echo ""
+	@echo "Pushing to GitHub..."
+	@git push
+	@echo ""
+	@echo "✅ Pushed! GitHub Actions is generating the Xcode project..."
+	@echo ""
+	@echo "Check progress:"
+	@echo "  https://github.com/$(shell gh repo view --json owner -q .owner.login)/PowerCut/actions"
+	@echo ""
+	@echo "In 2-3 minutes, you'll see a Pull Request with the generated project."
+	@echo "Merge it, then you can build the app!"
+	@echo ""
+	@echo "To watch progress: make watch"

@@ -1,0 +1,48 @@
+name: PowerCut
+
+options:
+  bundleIdPrefix: com.powercut
+  deploymentTarget:
+    macOS: "13.0"
+  xcodeVersion: "15.0"
+
+settings:
+  base:
+    DEVELOPMENT_TEAM: ""
+    MARKETING_VERSION: 1.0.0
+    CURRENT_PROJECT_VERSION: 1
+    CODE_SIGN_STYLE: Automatic
+    MACOSX_DEPLOYMENT_TARGET: "13.0"
+    SWIFT_VERSION: "5.0"
+
+targets:
+  PowerCut:
+    type: application
+    platform: macOS
+    sources:
+      - PowerCut
+    settings:
+      base:
+        ENABLE_PREVIEWS: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.powercut.app
+        INFOPLIST_FILE: PowerCut/Info.plist
+        CODE_SIGN_ENTITLEMENTS: PowerCut/PowerCut.entitlements
+        ENABLE_HARDENED_RUNTIME: YES
+        COMBINE_HIDPI_IMAGES: YES
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        GENERATE_INFOPLIST_FILE: NO
+    info:
+      path: PowerCut/Info.plist
+      properties:
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleName: PowerCut
+        CFBundleDisplayName: PowerCut
+        CFBundleExecutable: $(EXECUTABLE_NAME)
+        CFBundleIdentifier: $(PRODUCT_BUNDLE_IDENTIFIER)
+        CFBundlePackageType: APPL
+        LSMinimumSystemVersion: $(MACOSX_DEPLOYMENT_TARGET)
+        LSApplicationCategoryType: public.app-category.video
+        NSHumanReadableCopyright: ""
+        NSPrincipalClass: NSApplication
+        NSMainStoryboardFile: ""

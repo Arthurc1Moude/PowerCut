@@ -4,6 +4,14 @@
 
 PowerCut is a professional-grade desktop video editing application that puts AI at the center of the editing workflow. Instead of manually cutting every frame, PowerCut's AI handles the heavy lifting while you direct and refine.
 
+## ⚠️ Installation Note
+
+PowerCut is not code-signed with an Apple Developer certificate. When you first open it, macOS will show a security warning (恶意应用 / unidentified developer).
+
+**📖 See [INSTALLATION.md](INSTALLATION.md) for detailed installation instructions.**
+
+**Quick fix**: Right-click the app and select "Open" instead of double-clicking.
+
 ## Features
 
 ### Professional Timeline Editor

@@ -32,21 +32,28 @@ jobs:
           -scheme PowerCut \
           -configuration Release \
           -derivedDataPath ./build \
-          CODE_SIGN_IDENTITY="" \
-          CODE_SIGNING_REQUIRED=NO \
-          CODE_SIGNING_ALLOWED=NO
+          CODE_SIGN_IDENTITY="-" \
+          CODE_SIGNING_REQUIRED=NO
+    
+    - name: Ad-hoc sign the app
+      run: |
+        codesign --force --deep --sign - build/Build/Products/Release/PowerCut.app
     
     - name: Create DMG
       run: |
         # Create Applications symlink
         mkdir -p dist
         cp -R build/Build/Products/Release/PowerCut.app dist/
+        ln -s /Applications dist/Applications
         
         # Create DMG
         hdiutil create -volname "PowerCut" \
           -srcfolder dist \
           -ov -format UDZO \
           PowerCut.dmg
+        
+        # Sign the DMG
+        codesign --force --sign - PowerCut.dmg
     
     - name: Upload DMG artifact
       uses: actions/upload-artifact@v4

@@ -1,0 +1,47 @@
+# Xcode
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcworkspace/contents.xcworkspacedata
+*.xcuserstate
+*.xcuserdatad
+xcuserdata/
+DerivedData/
+.DS_Store
+
+# Swift Package Manager
+.build/
+Packages/
+*.xcodeproj
+
+# Build products
+build/
+*.app
+*.dSYM.zip
+*.dSYM
+dist/
+downloads/
+
+# CocoaPods
+Pods/
+
+# Carthage
+Carthage/Build/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Code Injection
+iOSInjectionProject/
+
+# DMG files
+*.dmg
+
+# Temporary files
+*.swp
+*.swo
+*~
+.*.sw?

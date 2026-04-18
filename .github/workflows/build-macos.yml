@@ -1,0 +1,84 @@
+name: Build macOS App
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build PowerCut for macOS
+    runs-on: macos-14  # macOS Sonoma with Xcode 15
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Select Xcode version
+      run: sudo xcode-select -s /Applications/Xcode_15.2.app/Contents/Developer
+    
+    - name: Show Xcode version
+      run: xcodebuild -version
+    
+    - name: Show Swift version
+      run: swift --version
+    
+    - name: Build PowerCut
+      run: |
+        xcodebuild clean build \
+          -project PowerCut.xcodeproj \
+          -scheme PowerCut \
+          -configuration Release \
+          -derivedDataPath ./build \
+          CODE_SIGN_IDENTITY="" \
+          CODE_SIGNING_REQUIRED=NO \
+          CODE_SIGNING_ALLOWED=NO
+    
+    - name: Create DMG
+      run: |
+        # Create Applications symlink
+        mkdir -p dist
+        cp -R build/Build/Products/Release/PowerCut.app dist/
+        
+        # Create DMG
+        hdiutil create -volname "PowerCut" \
+          -srcfolder dist \
+          -ov -format UDZO \
+          PowerCut.dmg
+    
+    - name: Upload DMG artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: PowerCut-macOS
+        path: PowerCut.dmg
+        retention-days: 30
+    
+    - name: Upload app bundle
+      uses: actions/upload-artifact@v4
+      with:
+        name: PowerCut-app
+        path: build/Build/Products/Release/PowerCut.app
+        retention-days: 30
+
+  release:
+    name: Create Release
+    needs: build
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/v')
+    
+    steps:
+    - name: Download DMG
+      uses: actions/download-artifact@v4
+      with:
+        name: PowerCut-macOS
+    
+    - name: Create Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: PowerCut.dmg
+        draft: false
+        prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
